@@ -1,5 +1,6 @@
 import { CurrencyPipe } from '@angular/common';
 import { Component, Input, input } from '@angular/core';
+import { InvestmentResult } from '../investment-result.model';
 
 @Component({
   selector: 'app-investment-results',
@@ -11,12 +12,5 @@ import { Component, Input, input } from '@angular/core';
 export class InvestmentResultsComponent {
   //results = input();//SIGNAL INPUT
 
-  @Input({ required: true }) results?: {
-    year: number,
-    interest: number,
-    valueEndOfYear: number,
-    annualInvestment: number,
-    totalInterest: number,
-    totalAmountInvested: number,
-  }[];//USING INPUT DECORATOR
+  @Input({ required: true }) results?: InvestmentResult[];//USING INPUT DECORATOR
 }
